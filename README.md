@@ -36,7 +36,7 @@ Guia de apoio para instalar e gerênciar um serviço customizado para o Streamse
   
   - Nesta tela podemos alterar o arquivos de configurações dos Streamsets ('sdc.properties') e as variáveis de ambientes -> Next
 
-![](../Screenshots/properties.png)
+![](Ambari-Streamsets/Screenshots/properties.png)
 
 
   - Por fim clique em implantar o serviço -> Deploy
