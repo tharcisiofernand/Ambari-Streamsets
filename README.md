@@ -35,8 +35,8 @@ Guia de apoio para instalar e gerênciar um serviço customizado para o Streamse
   - ### Imagem
   
   - Nesta tela podemos alterar o arquivos de configurações dos Streamsets ('sdc.properties') e as variáveis de ambientes -> Next
-  - ![](/home/tharcisio/Imagens/properties.png)
-  
+  - ![](../properties.png)
+
 
   - Por fim clique em implantar o serviço -> Deploy
   - ### Imagem
