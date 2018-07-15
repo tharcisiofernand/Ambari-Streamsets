@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>STREAMSETS</name>
+            <displayName>Streamsets</displayName>
+            <comment>The StreamSets DataOps Platform simplifies how to build, execute, operate and protect enterprise data movement architectures. Customized by CQuantt</comment>
+            <version>3.3.2</version>
+            <components>
+                <component>
+                  <name>STREAMSETS_MASTER</name>
+                  <displayName>Streamsets</displayName>
+                  <category>MASTER</category>
+                  <cardinality>1</cardinality>
+                  <commandScript>
+                    <script>scripts/SDC.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>10000</timeout>
+                  </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+              <osSpecific>
+                <osFamily>any</osFamily>
+              </osSpecific>
+            </osSpecifics>
+      			<configuration-dependencies>
+      				<config-type>sdc-ambari-config</config-type>
+              <config-type>sdc-env</config-type>
+              <config-type>sdc</config-type>
+      			</configuration-dependencies>	
+            <restartRequiredAfterChange>false</restartRequiredAfterChange>		
+        </service>
+    </services>
+</metainfo>

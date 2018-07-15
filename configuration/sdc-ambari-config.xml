@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration supports_adding_forbidden="true">
+
+    <property>
+        <name>sdc_install_dir</name>
+        <value>/opt/streamsets-datacollector</value>
+        <description>Location to install Streamsets</description>
+    </property> 
+
+    <property>
+        <name>sdc_conf_dir</name>
+        <value>/etc/sdc</value>
+        <description>Location to conf Streamsets</description>
+    </property> 
+
+    <property>
+        <name>sdc_appname</name>
+        <value>sdcapp-from-ambari</value>
+        <description>sdc application name</description>
+    </property> 
+
+    <property>
+        <name>setup_prebuilt</name>
+        <value>true</value>
+        <description>If false, will compile Flink from source instead</description>
+    </property>   
+      
+    <property>
+        <name>sdc_download_url</name>
+        <value>https://archives.streamsets.com/datacollector/3.3.1/rpm/el7/streamsets-datacollector-3.3.1-el7-all-rpms.tar</value>
+        <description>Snapshot download location. Downloaded when setup_prebuilt is true</description>
+    </property>   
+   
+</configuration> 

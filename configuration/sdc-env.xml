@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration supports_adding_forbidden="true">
+	<property>
+        <name>SDC_LOG_dir</name>
+        <value>/var/log/sdc</value>
+        <description>SDC LOG Dir</description>
+    </property>
+	<property>
+        <name>sdc_home</name>
+        <value>/opt/streamsets-datacollector</value>
+	</property>
+
+    <property>
+        <name>sdc_user</name>
+        <value>sdc</value>
+        <property-type>USER</property-type>
+        <description>User sdc daemon runs as</description>
+    </property> 
+        
+    <property>
+        <name>sdc_group</name>
+        <value>sdc</value>
+        <property-type>GROUP</property-type>
+        <description>sdc group</description>
+    </property>
+
+	<property>
+        <name>sdc-env</name>
+        <description>This is the template for sdc-env.sh file</description>
+        <value>
+#!/usr/bin/env bash
+export SDC_HOME=/opt/streamsets-datacollector
+export SDC_CONF=/etc/sdc
+export SDC_RESOURCES=/var/lib/sdc-resources
+export SDC_DATA=/var/lib/sdc
+export SDC_LOG=/var/log/sdc
+
+# Includes the JARs in extra lib in the root classloader, this is required to support
+# Snappy compression in Cassandra
+#
+export SDC_ROOT_CLASSPATH=${SDC_ROOT_CLASSPATH:-${SDC_DIST}/root-lib/'*'}
+
+# SDC upon start will verify that `ulimit -n` will return at least the following,
+# otherwise SDC start will fail.
+export SDC_FILE_LIMIT="${SDC_FILE_LIMIT:-32768}"
+
+# JVM options for the data collector process
+#
+export SDC_JAVA_OPTS="-Xmx1024m -Xms1024m -server -XX:-OmitStackTraceInFastThrow ${SDC_JAVA_OPTS}"
+
+# Indicate that MapR Username/Password security is enabled
+#export SDC_JAVA_OPTS="-Dmaprlogin.password.enabled=true ${SDC_JAVA_OPTS}"
+
+# Java 8 (JDK 1.8) specific options
+# by default, use CMS garbage collector
+export SDC_JAVA8_OPTS=${SDC_JAVA8_OPTS:-"-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Djdk.nio.maxCachedBufferSize=262144"}
+
+# Enables/disables the JVM security manager
+#
+export SDC_SECURITY_MANAGER_ENABLED=${SDC_SECURITY_MANAGER_ENABLED:-true}
+
+# Produce heap dump when SDC will die on OutOfMemoryError
+export SDC_HEAPDUMP_ON_OOM=${SDC_HEAPDUMP_ON_OOM:-true}
+
+# Optional path for the heap dump file, default is $SDC_LOG/sdc_heapdump_${timestamp}.hprof
+#export SDC_HEAPDUMP_PATH=
+
+# Enable GC logging automatically
+export SDC_GC_LOGGING=${SDC_GC_LOGGING:-true}
+
+# SDC will by default only run on Oracle JDK, any other JDK has to be explicitly enabled
+export SDC_ALLOW_UNSUPPORTED_JDK=${SDC_ALLOW_UNSUPPORTED_JDK:-false}
+
+        </value>
+    </property>
+</configuration>
