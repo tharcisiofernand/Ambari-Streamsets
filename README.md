@@ -2,7 +2,7 @@
 
 [![N|Solid](https://19ttqs47cfw33zkecq3dz58m-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/small_logo_2.png)](https://nodesource.com/products/nsolid)
 
-Guia de apoio para instalar e gerência um serviço customizado para o Streamsets. A plataforma StreamSets DataOps simplifica a forma de construir, executar, operar e proteger arquiteturas de movimentação de dados corporativos.
+Guia de apoio para instalar e gerênciar um serviço customizado para o Streamsets. A plataforma StreamSets DataOps simplifica a forma de construir, executar, operar e proteger arquiteturas de movimentação de dados corporativos.
 
 ### Observações
 
@@ -34,14 +34,14 @@ Guia de apoio para instalar e gerência um serviço customizado para o Streamset
   - Selecione em qual host deseja instalar o serviço -> Next
   - ### Imagem
   
-  - Nesta tela podemos alterar o arquivos de configuração dos Streamsets ('sdc.properties') e as variáveis de ambientes -> Next
+  - Nesta tela podemos alterar o arquivos de configurações dos Streamsets ('sdc.properties') e as variáveis de ambientes -> Next
   - ### Imagem
 
   - Por fim clique em implantar o serviço -> Deploy
   - ### Imagem
   
 
-  - Ao final receberemos uma mensagem de instalação bem sucessida, e apartir deste ponto temos gerênciamento do Streamsets de forma mais prática através do Ambari, podendo iniciar, parar e configurar seu serviço.
+  - Ao final receberemos uma mensagem de instalação bem sucessida, a partir deste ponto temos o gerênciamento do Streamsets de forma mais prática através do Ambari, podendo iniciar, parar e configurar seu serviço.
   - ### Imagem
 
 # Gerênciamento
