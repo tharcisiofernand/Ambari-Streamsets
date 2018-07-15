@@ -19,7 +19,7 @@ class Master(Script):
             Execute('cp /etc/sudoers /etc/sudoers.pre_sdc.bak')
             Execute('echo "'+params.sdc_user+'    ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers')
 
-        #Install SDC version 3.3.1-el7
+        #Install SDC version 3.3.0-el7
         Execute('rm -rf ' + params.sdc_install_dir, ignore_failures=True)
 
         Execute('touch ' + params.SDC_LOG_dir + 'sdc-setup.log', ignore_failures=True)
@@ -31,9 +31,8 @@ class Master(Script):
      
             #Fetch and unzip snapshot build, if no cached sdc tar package exists on Ambari server node
             if not os.path.exists(params.temp_file):
-                #Execute('wget '+params.sdc_download_url+' -O '+params.temp_file+' -a '  + params.sdc_log_file, user=params.sdc_user)
-                #Execute('tar -zxvf '+params.temp_file+ ' >> ' + params.sdc_log_file, user=params.sdc_user)
-                #Execute('rm -rf /tmp/streamsets-datacollector-3.3.1-el7-all-rpms/streamsets-datacollector-cdh*', user=params.sdc_user)
+                Execute('wget '+params.sdc_download_url+' -O '+params.temp_file+' -a '  + params.sdc_log_file, user=params.sdc_user)
+                Execute('tar -zxvf '+params.temp_file+ ' >> ' + params.sdc_log_file, user=params.sdc_user)
                 Execute('rm -rf /tmp/streamsets-datacollector-3.3.0-el7-all-rpms/streamsets-datacollector-cdh*', user=params.sdc_user)
                 Execute('sudo yum -y localinstall /tmp/streamsets-datacollector-3.3.0-el7-all-rpms/streamsets*.rpm', user=params.sdc_user)
                     

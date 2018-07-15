@@ -24,12 +24,12 @@
     <property>
         <name>setup_prebuilt</name>
         <value>true</value>
-        <description>If false, will compile Flink from source instead</description>
+        <description>If false, will compile sdc from source instead</description>
     </property>   
       
     <property>
         <name>sdc_download_url</name>
-        <value>https://archives.streamsets.com/datacollector/3.3.1/rpm/el7/streamsets-datacollector-3.3.1-el7-all-rpms.tar</value>
+        <value>https://archives.streamsets.com/datacollector/3.3.0/rpm/el7/streamsets-datacollector-3.3.0-el7-all-rpms.tar</value>
         <description>Snapshot download location. Downloaded when setup_prebuilt is true</description>
     </property>   
    
