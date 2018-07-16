@@ -1,8 +1,8 @@
-# # Ambari Custom Service for Streamsets
+# Ambari Custom Service for Streamsets
 
 [![N|Solid](https://19ttqs47cfw33zkecq3dz58m-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/small_logo_2.png)](https://nodesource.com/products/nsolid)
 
-Guia de apoio para instalar e gerênciar um serviço customizado para o Streamsets. A plataforma StreamSets DataOps simplifica a forma de construir, executar, operar e proteger arquiteturas de movimentação de dados corporativos.
+Guia de apoio para instalar e gerência um serviço customizado para o Streamsets. A plataforma StreamSets DataOps simplifica a forma de construir, executar, operar e proteger arquiteturas de movimentação de dados corporativos.
 
 ### Observações
 
@@ -29,24 +29,33 @@ Guia de apoio para instalar e gerênciar um serviço customizado para o Streamse
 
   - Em seguida, você pode clicar em 'Adicionar serviço' no menu suspenso 'Ações' no canto inferior esquerdo do painel do Ambari:
   - No canto inferior esquerdo -> Ações -> Adicionar serviço -> marque Streamsets -> Next ->
-  - ### Imagem
+
+
+[![N|Solid](https://github.com/tharcisiofernand/Ambari-Streamsets/blob/master/Screenshots/service.png?raw=true)](https://nodesource.com/products/nsolid)
 
   - Selecione em qual host deseja instalar o serviço -> Next
-  - ### Imagem
+
+
+[![N|Solid](https://github.com/tharcisiofernand/Ambari-Streamsets/blob/master/Screenshots/hosts.png?raw=true)](https://nodesource.com/products/nsolid)
   
-  - Nesta tela podemos alterar o arquivos de configurações dos Streamsets ('sdc.properties') e as variáveis de ambientes -> Next
+  - Nesta tela podemos alterar o arquivos de configuração dos Streamsets ('sdc.properties') e as variáveis de ambientes -> Next
 
-![](Ambari-Streamsets/Screenshots/properties.png)
-
+[![N|Solid](https://github.com/tharcisiofernand/Ambari-Streamsets/blob/master/Screenshots/config.png?raw=true)](https://nodesource.com/products/nsolid)
+   
 
   - Por fim clique em implantar o serviço -> Deploy
-  - ### Imagem
+
+
+[![N|Solid](https://github.com/tharcisiofernand/Ambari-Streamsets/blob/master/Screenshots/deploy.png?raw=true)](https://nodesource.com/products/nsolid)
   
 
-  - Ao final receberemos uma mensagem de instalação bem sucessida, a partir deste ponto temos o gerênciamento do Streamsets de forma mais prática através do Ambari, podendo iniciar, parar e configurar seu serviço.
-  - ### Imagem
+  - Ao final receberemos uma mensagem de instalação bem sucessida, e apartir deste ponto temos gerênciamento do Streamsets de forma mais prática através do Ambari, podendo iniciar, parar e configurar seu serviço.
+
+
+[![N|Solid](https://github.com/tharcisiofernand/Ambari-Streamsets/blob/master/Screenshots/finisher.png?raw=true)](https://nodesource.com/products/nsolid)
 
 # Gerênciamento
   - Clicando sobre o componente Streamsets é possível visualizar a aba "Configs", onde podemos alterar as configurações do componente.
-  - ### Imagem
 
+
+[![N|Solid](https://github.com/tharcisiofernand/Ambari-Streamsets/blob/master/Screenshots/properties.png?raw=true)](https://nodesource.com/products/nsolid)
